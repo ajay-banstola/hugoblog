@@ -1,4 +1,4 @@
 baseURL = 'https://ajaybanstola.com.np/'
 languageCode = 'en-us'
-title = 'That's interesting'
+title = "That's interesting"
 theme  = 'hugo-PaperMod'
