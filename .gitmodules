@@ -1,0 +1,4 @@
+[submodule "thebestblog/public"]
+	path = thebestblog/public
+	url = git@github.com:ajay-banstola/ajaybanstola.github.io.git
+	branch = ajay
