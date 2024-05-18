@@ -3,4 +3,4 @@ languageCode = 'en-us'
 title = "That's interesting"
 theme  = 'hugo-PaperMod'
 sectionPagesMenu = 'main'
-mainSections = 'home'
+mainSections = ['home', 'posts']
