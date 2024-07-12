@@ -61,37 +61,18 @@ Remember to subtract 1 from m so that the m value is not counted again. This hel
 Some other solutions found in leetcode:
 
 ```python
-class Solution:
-  def isValid(self, s: str) -> bool:
-    stack = []
-    closeToOpen = {")": "(", "]":"[", "}":"{"}
+class Solution(object):
+    def searchInsert(self, nums, target):
+        left, right = 0, len(nums) - 1
 
-    for c in s:
-      if c in closeToOpen:
-        if stack and stack[-1] == closeToOpen[c]:
-          stack.pop()
-        else:
-          return False
-      else:
-        stack.append(c)
-
-    return True if not stack else False
-
-```
-```python
-class Solution:
-    def searchInsert(self, nums: List[int], target: int) -> int:
-        low=0
-        high=len(nums)-1
-        ans=high+1
-        while low<=high:
-            mid=(low+high)//2
-            if nums[mid]>=target:
-                ans=mid
-                high=mid-1
+        while right >= left:
+            mid = (left + right)//2
+            if target > nums[mid]:
+                left = mid + 1
+            elif target < nums[mid]:
+                right = mid - 1
             else:
-                low=mid+1
-        return ans
+                return mid
+        
+        return left
 ```
-
-
