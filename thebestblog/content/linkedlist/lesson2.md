@@ -22,4 +22,13 @@ In this method, we traverse one list at a time. Say we reached the destination d
 
 Space complexity for this method is O(1) and time complexity is O(m+n).
 
+**Some of the key points:**
+
+**Intersection**: Two linked lists intersect if they share one or more nodes (same memory reference).
+
+**No Divergence After Intersection** : Once linked lists converge at a node, they cannot split again.
+
+**Only Convergence Possible**: After an intersection point, the lists must continue together until the end.
+
+**No intersection from start**: If there are two linked list with same starting point, there is no intersection because they are in different memory location to begin with.
 
