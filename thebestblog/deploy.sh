@@ -1,12 +1,16 @@
 #!/bin/bash
 
-# Function to check git status in a given directory
+# Function to check git status in a given directory and prompt for commit
 check_and_commit() {
   local dir=$1
   local branch=$2
 
   # Navigate to the specified directory
   cd "$dir" || exit
+
+  # Display the git status
+  echo "Git status in $dir:"
+  git status
 
   # Check if there are changes
   if [ -n "$(git status --porcelain)" ]; then
