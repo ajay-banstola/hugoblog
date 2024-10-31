@@ -4,7 +4,7 @@ date = 2024-10-26
 +++
 
 
-Here is the link to the problem: [Reverse a linked list (Recursive way)](https://www.youtube.com/watch?v=ps2Z9n5H03Y&list=PLk6CEY9XxSICJ0XSI7fbQFiEpDHISJxqT&index=7)
+Here is the link to the problem: [Reverse a linked list (Recursive way)](https://www.youtube.com/watch?v=ps2Z9n5H03Y&list=PLk6CEY9XxSICJ0XSI7fbQFiEpDHISJxqT&index=7).
 
 ## Problem Statement with Thought Process:
 
@@ -65,4 +65,26 @@ while current:
 - **Time Complexity**: \(O(n)\), where \(n\) is the number of nodes, as each node is visited once.
 - **Space Complexity**: \(O(n)\), due to the recursive stack space.
 
+
+## Implementation
+
+```python
+def find_kth_from_end(head: ListNode, k: int) -> ListNode:
+    # Initialize two pointers P1 and P2
+    p1 = head
+    p2 = head
+    
+    # Move P2 forward by k nodes
+    for _ in range(k):
+        if not p2:  # In case k is greater than the length of the list
+            return None
+        p2 = p2.next
+    
+    # Move both P1 and P2 until P2 reaches the end
+    while p2:
+        p1 = p1.next
+        p2 = p2.next
+    
+    # P1 now points to the kth node from the end
+    return p1
 ```
