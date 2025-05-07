@@ -4,4 +4,5 @@ title = "That's interesting"
 theme  = 'hugo-PaperMod'
 sectionPagesMenu = 'main'
 mainSections = ['home', 'posts']
-paginate = 10
+[pagination]
+  pagerSize = 10

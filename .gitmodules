@@ -2,3 +2,6 @@
 	path = thebestblog/public
 	url = git@github.com:ajay-banstola/ajaybanstola.github.io.git
 	branch = ajay
+[submodule "thebestblog/themes/hugo-PaperMod"]
+	path = thebestblog/themes/hugo-PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
