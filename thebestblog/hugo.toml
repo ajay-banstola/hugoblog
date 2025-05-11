@@ -3,6 +3,6 @@ languageCode = 'en-us'
 title = "That's interesting"
 theme  = 'hugo-PaperMod'
 sectionPagesMenu = 'main'
-mainSections = ['home', 'posts']
+mainSections = ['home']
 [pagination]
   pagerSize = 10
