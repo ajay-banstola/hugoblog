@@ -5,10 +5,11 @@ menu = 'main'
 
 ## Education
 
-- Masters in Computer Science at University of Louisiana at Lafayette
+- Masters in Computer Science at University of Louisiana at Lafayette (4.0 GPA)
 
 ## Experience
 
+- AI Integration Intership at Opportunity Machine, Lafayette, LA 
 - Software Engineer at Tekvortex Pvt. Ltd., Lalitpur, Nepal - 2 years
 - Associate Software Engineer at Paynep Pvt. Ltd., Kathmandu, Nepal - 1 year
 
@@ -19,7 +20,10 @@ menu = 'main'
 - Gym
 - Japanese
 - Chess,Badminton
-- Reading
+
+## Resume
+
+[Download Resume](/resume/resume.pdf)
 
 
 #### Contact: ajay.banstola@gmail.com
