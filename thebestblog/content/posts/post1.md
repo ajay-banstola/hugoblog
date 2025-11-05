@@ -70,4 +70,5 @@ Together, they allow you to build AI systems that are:
 * Contextual
 * Structured
 * Scalable
+* Efficient
 
