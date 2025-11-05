@@ -41,7 +41,17 @@ read commit_message
 check_and_commit "." "main"
 
 # Step 2: Run Hugo to build the site (without running a server)
-hugo --baseURL=https://ajaybanstola.com.np/
+# Clean the public directory first to avoid stale files
+if [ -d "public" ]; then
+  find public -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+  echo "Cleaned public directory"
+fi
+hugo --environment production --baseURL=https://ajaybanstola.com.np/ --minify
+
+if [ $? -ne 0 ]; then
+  echo "Hugo build failed!"
+  exit 1
+fi
 
 # Step 3: Check git status, commit, and push changes in the 'public' directory
 check_and_commit "public" "ajay"

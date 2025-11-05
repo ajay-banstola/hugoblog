@@ -45,7 +45,12 @@ Check-And-Commit "." "main"
 
 # Step 2: Run Hugo to build the site (without running a server)
 Write-Host "`nBuilding site with Hugo..." -ForegroundColor Cyan
-hugo --baseURL=https://ajaybanstola.com.np/
+# Clean the public directory first to avoid stale files
+if (Test-Path "public") {
+    Remove-Item "public\*" -Recurse -Force -Exclude ".git"
+    Write-Host "Cleaned public directory" -ForegroundColor Gray
+}
+hugo --environment production --baseURL=https://ajaybanstola.com.np/ --minify
 
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Hugo build failed!" -ForegroundColor Red
