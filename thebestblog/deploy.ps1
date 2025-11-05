@@ -45,9 +45,10 @@ Check-And-Commit "." "main"
 
 # Step 2: Run Hugo to build the site (without running a server)
 Write-Host "`nBuilding site with Hugo..." -ForegroundColor Cyan
-# Clean the public directory first to avoid stale files
+# Clean the public directory first to avoid stale files (preserve .git for submodule)
 if (Test-Path "public") {
-    Remove-Item "public\*" -Recurse -Force -Exclude ".git"
+    # Remove all files and folders except .git (important for submodules)
+    Get-ChildItem "public" -Exclude ".git" | Remove-Item -Recurse -Force
     Write-Host "Cleaned public directory" -ForegroundColor Gray
 }
 hugo --environment production --baseURL=https://ajaybanstola.com.np/ --minify
