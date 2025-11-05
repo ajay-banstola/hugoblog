@@ -1,8 +1,26 @@
 baseURL = 'https://ajaybanstola.com.np/'
 languageCode = 'en-us'
 title = "That's interesting"
-theme  = 'hugo-PaperMod'
-sectionPagesMenu = 'main'
-mainSections = ['home']
+theme = 'hugo-PaperMod'
+mainSections = ['posts']
+
 [pagination]
   pagerSize = 10
+
+[params]
+  env = 'production'
+  title = "That's interesting"
+  description = "Ajay Banstola's personal blog"
+  author = "Ajay Banstola"
+  
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "portfolio"
+    name = "Portfolio"
+    url = "/portfolio/"
+    weight = 20

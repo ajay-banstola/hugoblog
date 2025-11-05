@@ -1,6 +1,5 @@
 +++
 title = 'Portfolio'
-menu = 'main'
 +++
 
 ## Education
