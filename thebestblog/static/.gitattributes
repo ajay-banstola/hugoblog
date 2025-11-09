@@ -1,0 +1,3 @@
+# Prevent Git from altering line endings for assets (avoid SRI mismatch)
+*.css -text
+*.js -text
