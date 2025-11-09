@@ -3,6 +3,8 @@ languageCode = 'en-us'
 title = "That's interesting"
 theme = 'hugo-PaperMod'
 mainSections = ['posts']
+relativeURLs = true
+canonifyURLs = true
 
 [pagination]
   pagerSize = 10
