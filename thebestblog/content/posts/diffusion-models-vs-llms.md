@@ -18,13 +18,13 @@ To generate high-quality images, audio, and other continuous data by learning to
 ### How It Works:
 
 1. **Forward Process (Noising):** The model learns by adding Gaussian noise to real data (images, audio) over many steps until only pure noise remains.
-2. **Reverse Process (Denoising):** The model learns to reverse this process—starting from pure noise and gradually removing it step-by-step to create realistic samples.
+2. **Reverse Process (Denoising):** The model learns to reverse this process starting from pure noise and gradually removing it step-by-step to create realistic samples.
 3. **Training:** The model is trained to predict the noise at each step, allowing it to generate new samples from scratch.
 
 ### Key Characteristics:
 
 * **Generative Process:** Creates data through iterative refinement (typically 50-1000 steps).
-* **Output Type:** Continuous data—images, audio, video, 3D models.
+* **Output Type:** Continuous data: images, audio, video, 3D models.
 * **Architecture:** Usually U-Net or Transformer-based denoising networks.
 * **Sampling:** Stochastic (probabilistic) generation process.
 
